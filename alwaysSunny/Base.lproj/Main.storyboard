@@ -103,15 +103,8 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="22º" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4v-2f-piL">
-                                                    <rect key="frame" x="549" y="0.0" width="33" height="26"/>
-                                                    <animations/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Tomorrow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8d0-8d-DTu">
-                                                    <rect key="frame" x="48" y="0.0" width="98" height="26"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tomorrow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8d0-8d-DTu">
+                                                    <rect key="frame" x="48" y="4" width="98" height="26"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -128,6 +121,13 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22º" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4v-2f-piL">
+                                                    <rect key="frame" x="549" y="4" width="33" height="26"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <animations/>
                                             <constraints>
@@ -137,6 +137,7 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="Gov-04-9T2" secondAttribute="trailing" constant="10" id="LAv-Ti-m0I"/>
                                                 <constraint firstItem="2eV-Mi-zGK" firstAttribute="centerY" secondItem="YWW-kA-GNR" secondAttribute="centerY" id="QIW-Qf-p2d"/>
                                                 <constraint firstItem="LbX-Ze-CPU" firstAttribute="centerY" secondItem="YWW-kA-GNR" secondAttribute="centerY" multiplier="1.5" id="Sgr-Da-RRV"/>
+                                                <constraint firstItem="8d0-8d-DTu" firstAttribute="height" secondItem="g4v-2f-piL" secondAttribute="height" multiplier="1.5" id="Xtv-aU-Ss5"/>
                                                 <constraint firstItem="LbX-Ze-CPU" firstAttribute="centerX" secondItem="8d0-8d-DTu" secondAttribute="centerX" constant="5" id="mVy-C2-sGJ"/>
                                                 <constraint firstItem="LbX-Ze-CPU" firstAttribute="leading" secondItem="2eV-Mi-zGK" secondAttribute="trailing" constant="5" id="t5s-Eb-Lbt"/>
                                                 <constraint firstAttribute="leadingMargin" secondItem="2eV-Mi-zGK" secondAttribute="leading" constant="5" id="tif-xx-TeT"/>
@@ -144,12 +145,17 @@
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
+                                                    <exclude reference="Xtv-aU-Ss5"/>
                                                     <exclude reference="HWV-0a-ZJG"/>
                                                     <exclude reference="mVy-C2-sGJ"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstItem="8d0-8d-DTu" firstAttribute="centerY" secondItem="3p5-93-uZD" secondAttribute="centerY" multiplier="0.5" id="T5e-An-GBS"/>
+                                            <constraint firstItem="g4v-2f-piL" firstAttribute="centerY" secondItem="3p5-93-uZD" secondAttribute="centerY" multiplier="0.5" id="msG-0R-0G8"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="cellDayLabel" destination="8d0-8d-DTu" id="Qnu-UQ-Hbn"/>
                                             <outlet property="cellDescLabel" destination="LbX-Ze-CPU" id="KWF-4K-yGU"/>
